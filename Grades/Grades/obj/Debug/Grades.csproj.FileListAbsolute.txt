@@ -1,0 +1,7 @@
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades\bin\Debug\Grades.exe.config
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades\bin\Debug\Grades.exe
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades\bin\Debug\Grades.pdb
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades\obj\Debug\Grades.csprojAssemblyReference.cache
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades\obj\Debug\Grades.csproj.CoreCompileInputs.cache
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades\obj\Debug\Grades.exe
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades\obj\Debug\Grades.pdb
