@@ -8,11 +8,16 @@ namespace Grades
 {
     class GradeBook
     {
+        public GradeBook()
+        {
+            grades = new List<float>();
+        }
+
         public void AddGrade(float grade)
         {
             grades.Add(grade);
         }
-        List<float> grades = new List<float>();
+        List<float> grades;
     }
 }
 
@@ -40,4 +45,12 @@ public void AddGrade(float grade) {}
 /*
 System.Collections.Generic
 - contains several collections and one of them is List<>
+*/
+
+
+
+
+/*
+public GradeBook() {}
+- explicit constructor
 */
