@@ -14,7 +14,7 @@ namespace Grades
             book.AddGrade(91);
             book.AddGrade(89.5f);
 
-            GradeBook book2 = new GradeBook();
+            GradeBook book2 = book;
             book2.AddGrade(75);
         }
     }
@@ -25,6 +25,8 @@ GradeBook book = new GradeBook();
 - this is an implicit constructor
 - I use a class to create a book object
 - instantiate an instance of a class --> invokes a method called constructor (constructs an object)
+- classes are reference types
+- variables hold a pointer value
 
 book.AddGrade(89.5f);
 - we need 'f' in order to specify that the number is a float and not a double 
