@@ -68,3 +68,11 @@ Access Modifiers (public or private)
 - AddGrade method is public
 - grades is private
 */
+
+
+
+/*
+static
+- use static members of a class without creating an instance
+- Console.WriteLine() --> Console is static
+*/
