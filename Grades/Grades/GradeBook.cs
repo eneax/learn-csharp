@@ -17,7 +17,8 @@ namespace Grades
         {
             grades.Add(grade);
         }
-        List<float> grades;
+
+        private List<float> grades;
     }
 }
 
@@ -53,4 +54,17 @@ System.Collections.Generic
 /*
 public GradeBook() {}
 - explicit constructor
+*/
+
+
+
+/*
+Encapsulation
+- Enclosing or hiding details
+
+
+Access Modifiers (public or private)
+- the GradeBook constructor is public
+- AddGrade method is public
+- grades is private
 */
