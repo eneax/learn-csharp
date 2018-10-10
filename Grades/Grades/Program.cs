@@ -33,5 +33,20 @@ GradeBook book = new GradeBook();
 
 book.AddGrade(89.5f);
 - we need 'f' in order to specify that the number is a float and not a double 
+*/
 
+
+
+/*
+using System.Speech.Synthesis;
+SpeechSynthesizer synth = new SpeechSynthesizer();
+synth.Speak("Hello, this is the grade book program");
+
+- In order to use the SpeechSynthesizer class, we have to add System.Speech to Assembly References 
+  and import System.Speech.Synthesis;
+- A .Net Assembly is a file that contains our compiled code
+- Assemlies are .exe or .dll files (they contain metadata about all types inside)
+    * .exe is an executable file (just double click on it on Windows)
+    * .dll (Dynamic Link Library) cannot be executed directly, but another program can load it and 
+      use the code inside (as a reusable piece of code)
 */
