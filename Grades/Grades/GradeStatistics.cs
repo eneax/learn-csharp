@@ -21,5 +21,10 @@ namespace Grades
 }
 
 /*
-- We initialize HighestGrade with 0 and LowestGrade with the max value a float can reach
+- We initialize HighestGrade with 0 and LowestGrade with the max value a float can reach,
+  so that we can compare each grade in the grades List with the current HighestGrade and LowestGrade and
+  update the value as new grades are added.
+
+  stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
+  stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
 */

@@ -8,6 +8,8 @@ namespace Grades
 {
     class GradeBook
     {
+        private List<float> grades;
+
         public GradeBook()
         {
             grades = new List<float>();
@@ -32,8 +34,6 @@ namespace Grades
         {
             grades.Add(grade);
         }
-
-        private List<float> grades;
     }
 }
 
