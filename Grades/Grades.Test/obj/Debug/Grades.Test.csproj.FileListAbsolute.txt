@@ -12,3 +12,6 @@ C:\Users\eneax\Desktop\learn-csharp\Grades\Grades.Test\obj\Debug\Grades.Test.csp
 C:\Users\eneax\Desktop\learn-csharp\Grades\Grades.Test\obj\Debug\Grades.Test.csproj.CopyComplete
 C:\Users\eneax\Desktop\learn-csharp\Grades\Grades.Test\obj\Debug\Grades.Test.dll
 C:\Users\eneax\Desktop\learn-csharp\Grades\Grades.Test\obj\Debug\Grades.Test.pdb
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades.Test\bin\Debug\Grades.exe
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades.Test\bin\Debug\Grades.pdb
+C:\Users\eneax\Desktop\learn-csharp\Grades\Grades.Test\bin\Debug\Grades.exe.config
