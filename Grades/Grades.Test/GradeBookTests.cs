@@ -21,6 +21,29 @@ namespace Grades.Test
             GradeStatistics result = book.ComputeStatistics();
             Assert.AreEqual(90, result.HighestGrade);
         }
+
+        [TestMethod]
+        public void ComputesLowestGrade()
+        {
+            GradeBook book = new GradeBook();
+            book.AddGrade(10);
+            book.AddGrade(90);
+
+            GradeStatistics result = book.ComputeStatistics();
+            Assert.AreEqual(10, result.LowestGrade);
+        }
+
+        [TestMethod]
+        public void ComputesAverageGrade()
+        {
+            GradeBook book = new GradeBook();
+            book.AddGrade(91);
+            book.AddGrade(89.5f);
+            book.AddGrade(75);
+
+            GradeStatistics result = book.ComputeStatistics();
+            Assert.AreEqual(85.16, result.AverageGrade, 0.01);
+        }
     }
 }
 
@@ -47,4 +70,12 @@ Access Modifiers
 /*
 Assert.AreEqual(90, result.HighestGrade);
 - I expect a result of 90 as a highest grade
+*/
+
+
+
+/*
+Assert.AreEqual(85.16, result.AverageGrade, 0.01); 
+- If you want to compare a double with a float, you need to specify a delta (0.01)
+- delta represents the variation between the float and the double
 */
