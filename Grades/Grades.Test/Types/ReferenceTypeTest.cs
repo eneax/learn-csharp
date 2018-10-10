@@ -11,6 +11,16 @@ namespace Grades.Test.Types
     public class ReferenceTypeTest
     {
         [TestMethod]
+        public void StringComparisons()
+        {
+            string name1 = "Scott";
+            string name2 = "scott";
+
+            bool result = String.Equals(name1, name2, StringComparison.InvariantCultureIgnoreCase);
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
         public void IntVariablesHoldAValue()
         {
             int x1 = 100;
@@ -49,4 +59,16 @@ Value Types
 - They are smaller in size
 - Many build-in primitives are value types
     * int, double, float
+
+Creating Value Types
+- struct 
+    * it's very similar to a Class
+    * as a rule of thumb, use class by default
+    * should represent a single value
+    * should be small
+
+- enums (enumeration)
+    * a set of named constans
+    * underlying data type is 'int' by default
+    * if you don't specify a starting value, the default one is 0
 */
