@@ -11,6 +11,24 @@ namespace Grades.Test.Types
     public class TypeTest
     {
         [TestMethod]
+        public void UppercaseString()
+        {
+            string name = "scott";
+            name = name.ToUpper();
+
+            Assert.AreEqual("SCOTT", name);
+        }
+
+        [TestMethod]
+        public void AddDaysToDateTime()
+        {
+            DateTime date = new DateTime(2015, 1, 1);
+            date = date.AddDays(1);
+
+            Assert.AreEqual(2, date.Day);
+        }
+
+        [TestMethod]
         public void ValueTypesPassByValue()
         {
             int x = 46;
@@ -77,6 +95,7 @@ Reference Types
 - Variables store a reference to an object 
     * every time I create a class, I'm creating a new reference type
     * multiple variables can point to the same object
+    * string is a reference type, but it behaves like a value type
 */
 
 
@@ -88,6 +107,9 @@ Value Types
 - They are smaller in size
 - Many build-in primitives are value types
     * int, double, float
+- They are immutable
+    * once you create a value, it cannot change
+    * the data inside the value can change
 
 Creating Value Types
 - struct (creates a structure)
@@ -116,4 +138,7 @@ Methods Parameters
 
 /*
 IncrementNumber --> doesn't modify the 'x' variable
+
+name.ToUpper(); --> doesn't modify the 'name' string I'm pointing to,
+                    instead it creates a new one
 */
