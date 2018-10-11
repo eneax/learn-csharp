@@ -11,6 +11,22 @@ namespace Grades.Test.Types
     public class TypeTest
     {
         [TestMethod]
+        public void UsingArrays()
+        {
+            float[] grades;
+            grades = new float[3];
+
+            AddGrades(grades);
+
+            Assert.AreEqual(89.1f, grades[1]);
+        }
+
+        private void AddGrades(float[] grades)
+        {
+            grades[1] = 89.1f;
+        }
+
+        [TestMethod]
         public void UppercaseString()
         {
             string name = "scott";
@@ -141,4 +157,14 @@ IncrementNumber --> doesn't modify the 'x' variable
 
 name.ToUpper(); --> doesn't modify the 'name' string I'm pointing to,
                     instead it creates a new one
+*/
+
+
+
+/*
+Array
+- manage a collection of variables
+- it's always a reference type
+- it's 0 indexed
+- arrays have a fixed size that I have to specify when I create it
 */
