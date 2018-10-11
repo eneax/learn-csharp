@@ -8,8 +8,37 @@ using System.Threading.Tasks;
 namespace Grades.Test.Types
 {
     [TestClass]
-    public class ReferenceTypeTest
+    public class TypeTest
     {
+        [TestMethod]
+        public void ValueTypesPassByValue()
+        {
+            int x = 46;
+            IncrementNumber(x);
+
+            Assert.AreEqual(46, x);
+        }
+
+        private void IncrementNumber(int number)
+        {
+            number += 1;
+        }
+
+        [TestMethod]
+        public void ReferenceTypesPassByValue()
+        {
+            GradeBook book1 = new GradeBook();
+            GradeBook book2 = book1;
+
+            GiveBookAName(book2);
+            Assert.AreEqual("A GradeBook", book1.Name);
+        }
+
+        private void GiveBookAName(GradeBook book)
+        {
+            book.Name = "A GradeBook";
+        }
+
         [TestMethod]
         public void StringComparisons()
         {
@@ -61,14 +90,30 @@ Value Types
     * int, double, float
 
 Creating Value Types
-- struct 
+- struct (creates a structure)
     * it's very similar to a Class
     * as a rule of thumb, use class by default
-    * should represent a single value
-    * should be small
+    * it should represent a single value
+    * it should be small
+    * i.e. contact number, currency amount, DateTime
 
 - enums (enumeration)
-    * a set of named constans
+    * it creates a type that holds specific numerical values
+    * useful to create a set of named constans
     * underlying data type is 'int' by default
     * if you don't specify a starting value, the default one is 0
+*/
+
+
+
+/*
+Methods Parameters
+- By default parameters are passed "by values"
+- Value types pass a copy of the value
+*/
+
+
+
+/*
+IncrementNumber --> doesn't modify the 'x' variable
 */
