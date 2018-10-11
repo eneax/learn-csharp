@@ -16,9 +16,19 @@ namespace Grades
             book.AddGrade(75);
 
             GradeStatistics stats = book.ComputeStatistics();
-            Console.WriteLine("Average Grade " + stats.AverageGrade);
-            Console.WriteLine("Highest Grade " + stats.HighestGrade);
-            Console.WriteLine("Lowest Grade " + stats.LowestGrade);
+            WriteResult("Average", stats.AverageGrade);
+            WriteResult("Highest", (int)stats.HighestGrade);
+            WriteResult("Lowest", stats.LowestGrade);
+        }
+
+        static void WriteResult(string description, int result)
+        {
+            Console.WriteLine(description + ": " + result);
+        }
+
+        static void WriteResult(string description, float result)
+        {
+            Console.WriteLine($"{description}: {result:F2}");
         }
     }
 }
@@ -49,4 +59,27 @@ synth.Speak("Hello, this is the grade book program");
     * .exe is an executable file (just double click on it on Windows)
     * .dll (Dynamic Link Library) cannot be executed directly, but another program can load it and 
       use the code inside (as a reusable piece of code)
+*/
+
+
+
+/*
+Methods
+- it defines behavior
+- every method has a return type (void, if no value is returned)
+- it has 0 or more parameters
+    * use 'params' keyword to accept a variable number of parameters
+- every method has a signature (name of method + parameter)
+*/
+
+
+/*
+Console.WriteLine("{0}: {1}", description, result);
+- 0 and 1 are like placeholders for description and result
+
+Console.WriteLine("{0}: {1:F2}", description, result);
+- takes the result and returns a float with 2 decimal numbers
+
+Console.WriteLine("{0}: {1:C}", description, result);
+- format result as a currency
 */
