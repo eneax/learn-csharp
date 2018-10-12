@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,14 @@ namespace Grades
             }
             stats.AverageGrade = sum / grades.Count;
             return stats;
+        }
+
+        public void WriteGrades(TextWriter destination)
+        {
+            for (int i = 0; i < grades.Count; i++)
+            {
+                destination.WriteLine(grades[i]);
+            }
         }
 
         public void AddGrade(float grade)
@@ -134,4 +143,21 @@ static
 /*
 stats.AverageGrade = sum / grades.Count;
 - Count tells you how many items are inside a list
+*/
+
+
+
+/*
+@out --> escapes the out reserved keyword in C#
+*/
+
+
+
+/*
+Jumping
+    * break      --> break out of a loop and stop looping
+    * continue   --> skip executing any conde after the 'continue' statement and go to the next iteration of the loop
+    * goto       --> jump to a statement marked by a label
+    * return     --> you can use a return in a void method (break out of loop and jump out of method)
+    * throw
 */
