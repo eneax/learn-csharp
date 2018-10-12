@@ -11,11 +11,13 @@ namespace Grades
         static void Main(string[] args)
         {
             GradeBook book = new GradeBook();
+            book.Name = "Scott's Grade Book";
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
 
             GradeStatistics stats = book.ComputeStatistics();
+            Console.WriteLine(book.Name);
             WriteResult("Average", stats.AverageGrade);
             WriteResult("Highest", (int)stats.HighestGrade);
             WriteResult("Lowest", stats.LowestGrade);
@@ -65,7 +67,7 @@ synth.Speak("Hello, this is the grade book program");
 
 /*
 Methods
-- it defines behavior
+- are all about behavior
 - every method has a return type (void, if no value is returned)
 - it has 0 or more parameters
     * use 'params' keyword to accept a variable number of parameters
@@ -82,4 +84,35 @@ Console.WriteLine("{0}: {1:F2}", description, result);
 
 Console.WriteLine("{0}: {1:C}", description, result);
 - format result as a currency
+*/
+
+
+
+/*
+Fields
+- it defines the variables (state or data) inside a class
+- it can be readonly
+- it's common to make them private and hide them from the outside
+- we make them available on the outside thanks to properties
+*/
+
+
+
+/*
+Properties
+- are all about state
+
+- it defines a get and/or set accessor
+    * used to expose and control fields
+
+- auto-implemented properties use a hidden field
+    public string Name
+    {
+        get;
+        set;
+    }
+
+- allow you to write some logic into a get and set accessor
+
+- use public property and private fields
 */
