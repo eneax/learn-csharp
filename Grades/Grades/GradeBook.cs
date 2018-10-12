@@ -8,11 +8,14 @@ namespace Grades
 {
     public class GradeBook
     {
+        // constructor
         public GradeBook()
         {
+            _name = "Empty";
             grades = new List<float>();
         }
 
+        // method
         public GradeStatistics ComputeStatistics()
         {
             GradeStatistics stats = new GradeStatistics();
@@ -33,6 +36,7 @@ namespace Grades
             grades.Add(grade);
         }
 
+        // property
         public string Name
         {
             get
@@ -45,11 +49,25 @@ namespace Grades
                 // write to property
                 if (!String.IsNullOrEmpty(value))
                 {
+                    // if name is changing
+                    if (_name != value)
+                    {
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+
+                        NameChanged(this, args);
+                    }
+
                     _name = value;
                 }
             }
         }
 
+        // public field 
+        public event NameChangedDelegate NameChanged;
+
+        // private field
         private string _name;
 
         private List<float> grades;

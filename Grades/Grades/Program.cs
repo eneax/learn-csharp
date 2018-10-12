@@ -11,7 +11,13 @@ namespace Grades
         static void Main(string[] args)
         {
             GradeBook book = new GradeBook();
+
+            book.NameChanged += OnNameChanged;
+            
+
             book.Name = "Scott's Grade Book";
+            book.Name = "Grade Book";
+
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
@@ -22,6 +28,12 @@ namespace Grades
             WriteResult("Highest", (int)stats.HighestGrade);
             WriteResult("Lowest", stats.LowestGrade);
         }
+
+        static void OnNameChanged(object sender, NameChangedEventArgs args)
+        {
+            Console.WriteLine($"Grade book changing name from {args.ExistingName} to {args.NewName}");
+        }
+
 
         static void WriteResult(string description, int result)
         {
@@ -115,4 +127,40 @@ Properties
 - allow you to write some logic into a get and set accessor
 
 - use public property and private fields
+*/
+
+
+
+/*
+Events
+- allows a class to send notifications to other classes or objects
+- the publisher (or a button being clicked) raises an event
+- the subscriber (or the code interested in the event) subscribes to the event
+- you can have multiple subscribers listening to an event
+- the publisher doesn't have to keep track of who is subscribing
+- the subscribers don't need to know about each other
+- everything is handled by delegates
+*/
+
+
+
+/*
+Delegates
+- a delegate is a type that references methods
+- they can reference multiple methods (multicast delegates)
+
+* For instance...
+public delegate void Writer(string message);
+
+ public class Logger 
+ {
+    public void WriteMessage(string message)
+    {
+        Console.WriteLine(message);
+    }
+ }
+
+Logger logger = new Logger();
+Writer writer = new Writer(logger.WriteMessage);
+writer("Success");
 */
