@@ -17,7 +17,7 @@ namespace Grades
         }
 
         // method
-        public GradeStatistics ComputeStatistics()
+        public virtual GradeStatistics ComputeStatistics()
         {
             GradeStatistics stats = new GradeStatistics();
 
@@ -80,7 +80,8 @@ namespace Grades
         // private field
         private string _name;
 
-        private List<float> grades;
+        // protected can be accessed from this class or a derived class
+        protected List<float> grades;
     }
 }
 
