@@ -15,7 +15,22 @@ namespace NumberGuesser
             string appVersion = "1.0.0";
             string appAuthor = "eneax";
 
+            // Change text color
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            // Print out app info
             Console.WriteLine($"{appName}: Version {appVersion} by {appAuthor}");
+
+            // Reset text color
+            Console.ResetColor();
+
+            // Ask users name
+            Console.WriteLine("What is your name?");
+
+            // Get user name
+            string input = Console.ReadLine();
+
+            Console.WriteLine($"Hello {input}, let's play a game...");
         }
     }
 }
