@@ -22,7 +22,7 @@ namespace Grades
             GradeStatistics stats = new GradeStatistics();
 
             float sum = 0;
-            foreach(float grade in grades)
+            foreach (float grade in grades)
             {
                 stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
                 stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
@@ -52,24 +52,25 @@ namespace Grades
             {
                 // read name property
                 return _name;
-            }    
+            }
             set
             {
-                // write to property
-                if (!String.IsNullOrEmpty(value))
+                if (string.IsNullOrEmpty(value))
                 {
-                    // if name is changing
-                    if (_name != value)
-                    {
-                        NameChangedEventArgs args = new NameChangedEventArgs();
-                        args.ExistingName = _name;
-                        args.NewName = value;
-
-                        NameChanged(this, args);
-                    }
-
-                    _name = value;
+                    throw new ArgumentException("Name cannot be null or empty");
                 }
+
+                // if name is changing
+                if (_name != value && NameChanged != null)
+                {
+                    NameChangedEventArgs args = new NameChangedEventArgs();
+                    args.ExistingName = _name;
+                    args.NewName = value;
+
+                    NameChanged(this, args);
+                }
+
+                _name = value;
             }
         }
 
@@ -160,4 +161,32 @@ Jumping
     * goto       --> jump to a statement marked by a label
     * return     --> you can use a return in a void method (break out of loop and jump out of method)
     * throw
+*/
+
+
+
+/*
+Throwing Exceptions
+- use throw to raise an exception
+- when you throw an exception, you throw an object
+- an exception is a signal that an error exists
+- use it only in excceptional cases 
+  (i.e. bad input value, program out of memory, network not available for comunication)
+*/
+
+
+
+/*
+Handling Exceptions 
+- handle exception using a try block
+- the try block is then followed by a catch statement
+*/
+
+
+
+/*
+Chaining Catch Blocks
+- place most specific type in the first catch clause
+- catching a System.Exception catches everything
+    * except for few 'special' exceptions
 */
