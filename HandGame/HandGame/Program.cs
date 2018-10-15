@@ -40,73 +40,73 @@ namespace HandGame
                     {
                         case 1:
                             inputCPU = "ROCK";
-                            Console.WriteLine("Computer chose ROCK");
+                            PrintColorMessage(ConsoleColor.DarkCyan, "Computer chose ROCK");
                             if (inputPlayer == "ROCK")
                             {
-                                Console.WriteLine("DRAW");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "DRAW");
                             }
                             else if (inputPlayer == "PAPER")
                             {
-                                Console.WriteLine("PLAYER WINS");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "YOU WIN");
                                 scorePlayer++;
                             }
                             else if (inputPlayer == "SCISSORS")
                             {
-                                Console.WriteLine("CPU WINS");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "CPU WINS");
                                 scoreCPU++;
                             }
                             break;
                         case 2:
                             inputCPU = "PAPER";
-                            Console.WriteLine("Computer chose PAPER");
+                            PrintColorMessage(ConsoleColor.DarkCyan, "Computer chose PAPER");
                             if (inputPlayer == "ROCK")
                             {
-                                Console.WriteLine("CPU WINS");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "CPU WINS");
                                 scoreCPU++;
                             }
                             else if (inputPlayer == "PAPER")
                             {
-                                Console.WriteLine("DRAW");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "DRAW");
                             }
                             else if (inputPlayer == "SCISSORS")
                             {
-                                Console.WriteLine("PLAYER WINS");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "YOU WIN");
                                 scorePlayer++;
                             }
                             break;
                         case 3:
                             inputCPU = "SCISSORS";
-                            Console.WriteLine("Computer chose SCISSORS");
+                            PrintColorMessage(ConsoleColor.DarkCyan, "Computer chose SCISSORS");
                             if (inputPlayer == "ROCK")
                             {
-                                Console.WriteLine("PLAYER WINS");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "YOU WIN");
                                 scorePlayer++;
                             }
                             else if (inputPlayer == "PAPER")
                             {
-                                Console.WriteLine("CPU WINS");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "CPU WINS");
                                 scoreCPU++;
                             }
                             else if (inputPlayer == "SCISSORS")
                             {
-                                Console.WriteLine("DRAW");
+                                PrintColorMessage(ConsoleColor.DarkYellow, "DRAW");
                             }
                             break;
                         default:
-                            Console.WriteLine("Invalid entry!");
+                            PrintColorMessage(ConsoleColor.DarkRed, "Invalid entry!");
                             break;
                     }
 
-                    Console.WriteLine($"SCORES --> PLAYER: {scorePlayer}, CPU: {scoreCPU}");
+                    PrintColorMessage(ConsoleColor.DarkRed, $"SCORES --> PLAYER: {scorePlayer}, CPU: {scoreCPU}");
                 }
 
                 if (scorePlayer == 3)
                 {
-                    Console.WriteLine("Player WON");
+                    PrintColorMessage(ConsoleColor.Green, "YOU WON THE GAME");
                 }
                 else if (scoreCPU == 3)
                 {
-                    Console.WriteLine("CPU WON");
+                    PrintColorMessage(ConsoleColor.Green, "CPU WON THE GAME");
                 }
 
                 // Ask user to play again
@@ -121,10 +121,28 @@ namespace HandGame
                 }
                 else if (answer == "n")
                 {
-                    Console.WriteLine("Bye bye!");
+                    PrintColorMessage(ConsoleColor.Cyan, "Bye Bye!");
                     return;
                 }
             }
+        }
+
+        // Get and display app info
+        static void GetAppInfo()
+        {
+            // Set app variables
+            string appName = "Rock, Paper, Scissors";
+            string appVersion = "1.0.0";
+            string appAuthor = "eneax";
+
+            // Change text color
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+
+            // Print out app info
+            Console.WriteLine($"{appName}: Version {appVersion} by {appAuthor}");
+
+            // Reset text color
+            Console.ResetColor();
         }
 
         // Ask user name and greet
@@ -139,18 +157,14 @@ namespace HandGame
             Console.WriteLine($"Hello {inputName}, let's play a game...");
         }
 
-        static void GetAppInfo()
+        // Print color message
+        static void PrintColorMessage(ConsoleColor color, string message)
         {
-            // Set app variables
-            string appName = "Rock, Paper, Scissors";
-            string appVersion = "1.0.0";
-            string appAuthor = "eneax";
-
             // Change text color
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.ForegroundColor = color;
 
-            // Print out app info
-            Console.WriteLine($"{appName}: Version {appVersion} by {appAuthor}");
+            // Tell users it's not a number
+            Console.WriteLine(message);
 
             // Reset text color
             Console.ResetColor();
