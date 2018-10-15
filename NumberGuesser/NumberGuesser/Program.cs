@@ -24,7 +24,7 @@ namespace NumberGuesser
                 // Init currect number
                 int correctNumber = random.Next(1, 10);
 
-                // Init guess var
+                // Init guess variable
                 int guess = 0;
 
                 // Ask user for number
@@ -46,14 +46,19 @@ namespace NumberGuesser
                         continue;
                     }
 
-                    // Cast to int and put to guess var
+                    // Cast to int and put to guess variable
                     guess = int.Parse(input);
 
                     // Match guess to correct number
-                    if (guess != correctNumber)
+                    if (guess < correctNumber)
                     {
-                        // Print error message 
-                        PrintColorMessage(ConsoleColor.Red, "Wrong number, please try again!!");
+                        // Print error message for guess < correctNumber
+                        PrintColorMessage(ConsoleColor.Red, $"Wrong number, the number I'm thinking of is greater than {guess}");
+                    }
+                    else if (guess > correctNumber)
+                    {
+                        // Print error message for guess > correctNumber
+                        PrintColorMessage(ConsoleColor.Red, $"Wrong number, the number I'm thinking of is lower than {guess}");
                     }
                 }
 
