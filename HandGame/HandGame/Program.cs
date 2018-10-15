@@ -20,6 +20,7 @@ namespace HandGame
             string inputPlayer, inputCPU;
             int randomInt;
 
+            // Start playing
             while (true)
             {
                 int scorePlayer = 0;
@@ -29,9 +30,8 @@ namespace HandGame
                 {
                     // Ask user to choose an option
                     Console.Write("Choose between ROCK, PAPER AND SCISSORS:     ");
-                    inputPlayer = Console.ReadLine();
-                    inputPlayer = inputPlayer.ToUpper();
-
+                    inputPlayer = Console.ReadLine().ToUpper();
+                     
                     // Generate random num from 1 to 3
                     Random rnd = new Random();
                     randomInt = rnd.Next(1, 4);
@@ -109,20 +109,28 @@ namespace HandGame
                     PrintColorMessage(ConsoleColor.Green, "CPU WON THE GAME");
                 }
 
-                // Ask user to play again
-                Console.WriteLine("Play again? [y or n]");
-
-                // Get answer
-                string answer = Console.ReadLine().ToLower();
-
-                if (answer == "y")
+                // Keep asking to play until user answers [y or n]
+                while (true)
                 {
-                    continue;
-                }
-                else if (answer == "n")
-                {
-                    PrintColorMessage(ConsoleColor.Cyan, "Bye Bye!");
-                    return;
+                    // Ask user to play again
+                    Console.WriteLine("Play again? [y or n]");
+
+                    // Get answer
+                    string answer = Console.ReadLine().ToLower();
+
+                    if (answer == "y")
+                    {
+                        break;
+                    }
+                    else if (answer == "n")
+                    {
+                        PrintColorMessage(ConsoleColor.Cyan, "Bye Bye!");
+                        return;
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
             }
         }
@@ -136,7 +144,7 @@ namespace HandGame
             string appAuthor = "eneax";
 
             // Change text color
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.ForegroundColor = ConsoleColor.Magenta;
 
             // Print out app info
             Console.WriteLine($"{appName}: Version {appVersion} by {appAuthor}");
