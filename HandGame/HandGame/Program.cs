@@ -10,6 +10,13 @@ namespace HandGame
     {
         static void Main(string[] args)
         {
+            // Define variables
+            string inputPlayer, inputCPU;
+            int randomInt;
+
+            // Ask user to choose an option
+            Console.Write("Choose between ROCK, PAPER AND SCISSORS:     ");
+            inputPlayer = Console.ReadLine();
         }
     }
 }
