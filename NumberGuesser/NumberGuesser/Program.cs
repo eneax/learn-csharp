@@ -75,12 +75,9 @@ namespace NumberGuesser
                 {
                     continue;
                 }
-                else if (answer == "n")
-                {
-                    return;
-                }
                 else
                 {
+                    Console.WriteLine("Goodbye!");
                     return;
                 }
             }
