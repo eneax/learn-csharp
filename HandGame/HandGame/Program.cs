@@ -29,7 +29,7 @@ namespace HandGame
                 while (scorePlayer < 3 && scoreCPU < 3)
                 {
                     // Ask user to choose an option
-                    Console.Write("Choose between ROCK, PAPER AND SCISSORS:     ");
+                    Console.Write("Choose between ROCK [1], PAPER [2] AND SCISSORS [3]:     ");
                     inputPlayer = Console.ReadLine().ToUpper();
                      
                     // Generate random num from 1 to 3
@@ -40,64 +40,82 @@ namespace HandGame
                     {
                         case 1:
                             inputCPU = "ROCK";
-                            PrintColorMessage(ConsoleColor.DarkCyan, "Computer chose ROCK");
-                            if (inputPlayer == "ROCK")
+                            
+                            if (inputPlayer == "ROCK" || inputPlayer == "1")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "DRAW");
                             }
-                            else if (inputPlayer == "PAPER")
+                            else if (inputPlayer == "PAPER" || inputPlayer == "2")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "YOU WIN");
                                 scorePlayer++;
                             }
-                            else if (inputPlayer == "SCISSORS")
+                            else if (inputPlayer == "SCISSORS" || inputPlayer == "3")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "CPU WINS");
                                 scoreCPU++;
                             }
+                            else
+                            {
+                                PrintColorMessage(ConsoleColor.DarkRed, "Invalid entry!");
+                                continue;
+                            }
+                            PrintColorMessage(ConsoleColor.DarkCyan, $"Computer chose {inputCPU}");
                             break;
                         case 2:
                             inputCPU = "PAPER";
-                            PrintColorMessage(ConsoleColor.DarkCyan, "Computer chose PAPER");
-                            if (inputPlayer == "ROCK")
+                            
+                            if (inputPlayer == "ROCK" || inputPlayer == "1")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "CPU WINS");
                                 scoreCPU++;
                             }
-                            else if (inputPlayer == "PAPER")
+                            else if (inputPlayer == "PAPER" || inputPlayer == "2")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "DRAW");
                             }
-                            else if (inputPlayer == "SCISSORS")
+                            else if (inputPlayer == "SCISSORS" || inputPlayer == "3")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "YOU WIN");
                                 scorePlayer++;
                             }
+                            else
+                            {
+                                PrintColorMessage(ConsoleColor.DarkRed, "Invalid entry!");
+                                continue;
+                            }
+                            PrintColorMessage(ConsoleColor.DarkCyan, $"Computer chose {inputCPU}");
                             break;
                         case 3:
                             inputCPU = "SCISSORS";
-                            PrintColorMessage(ConsoleColor.DarkCyan, "Computer chose SCISSORS");
-                            if (inputPlayer == "ROCK")
+                           
+                            if (inputPlayer == "ROCK" || inputPlayer == "1")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "YOU WIN");
                                 scorePlayer++;
                             }
-                            else if (inputPlayer == "PAPER")
+                            else if (inputPlayer == "PAPER" || inputPlayer == "2")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "CPU WINS");
                                 scoreCPU++;
                             }
-                            else if (inputPlayer == "SCISSORS")
+                            else if (inputPlayer == "SCISSORS" || inputPlayer == "3")
                             {
                                 PrintColorMessage(ConsoleColor.DarkYellow, "DRAW");
                             }
+                            else
+                            {
+                                PrintColorMessage(ConsoleColor.DarkRed, "Invalid entry!");
+                                continue;
+                            }
+                            PrintColorMessage(ConsoleColor.DarkCyan, $"Computer chose {inputCPU}");
                             break;
                         default:
                             PrintColorMessage(ConsoleColor.DarkRed, "Invalid entry!");
                             break;
                     }
 
-                    PrintColorMessage(ConsoleColor.DarkRed, $"SCORES --> PLAYER: {scorePlayer}, CPU: {scoreCPU}");
+                    PrintColorMessage(ConsoleColor.Cyan, $"SCORES --> PLAYER: {scorePlayer}, CPU: {scoreCPU}");
                 }
 
                 if (scorePlayer == 3)
@@ -129,6 +147,7 @@ namespace HandGame
                     }
                     else
                     {
+                        PrintColorMessage(ConsoleColor.DarkRed, "Invalid entry!");
                         continue;
                     }
                 }
