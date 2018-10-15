@@ -10,14 +10,17 @@ namespace HandGame
     {
         static void Main(string[] args)
         {
+            // Get and display app info
             GetAppInfo();
 
-            // Define variables
+            // Ask user name and greet
+            GreetUser();
+
+            // Define game variables
             string inputPlayer, inputCPU;
             int randomInt;
-            bool playAgain = true;
 
-            while (playAgain)
+            while (true)
             {
                 int scorePlayer = 0;
                 int scoreCPU = 0;
@@ -106,18 +109,34 @@ namespace HandGame
                     Console.WriteLine("CPU WON");
                 }
 
-                Console.WriteLine("Do you want to play again? [y or n]");
-                string loop = Console.ReadLine();
+                // Ask user to play again
+                Console.WriteLine("Play again? [y or n]");
 
-                if (loop == "y")
+                // Get answer
+                string answer = Console.ReadLine().ToLower();
+
+                if (answer == "y")
                 {
-                    playAgain = true;
+                    continue;
                 }
-                else if (loop == "n")
+                else if (answer == "n")
                 {
-                    playAgain = false;
+                    Console.WriteLine("Bye bye!");
+                    return;
                 }
             }
+        }
+
+        // Ask user name and greet
+        static void GreetUser()
+        {
+            // Ask users name
+            Console.WriteLine("What is your name?");
+
+            // Get user name
+            string inputName = Console.ReadLine();
+
+            Console.WriteLine($"Hello {inputName}, let's play a game...");
         }
 
         static void GetAppInfo()
