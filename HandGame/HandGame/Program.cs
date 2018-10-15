@@ -10,6 +10,8 @@ namespace HandGame
     {
         static void Main(string[] args)
         {
+            GetAppInfo();
+
             // Define variables
             string inputPlayer, inputCPU;
             int randomInt;
@@ -116,6 +118,23 @@ namespace HandGame
                     playAgain = false;
                 }
             }
+        }
+
+        static void GetAppInfo()
+        {
+            // Set app variables
+            string appName = "Rock, Paper, Scissors";
+            string appVersion = "1.0.0";
+            string appAuthor = "eneax";
+
+            // Change text color
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+
+            // Print out app info
+            Console.WriteLine($"{appName}: Version {appVersion} by {appAuthor}");
+
+            // Reset text color
+            Console.ResetColor();
         }
     }
 }
