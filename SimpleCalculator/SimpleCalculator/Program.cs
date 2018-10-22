@@ -24,7 +24,22 @@ namespace SimpleCalculator
             {
                 // Prompt user for first number
                 Console.Write("\nEnter first number:    ");
-                firstNum = Double.Parse(Console.ReadLine());
+                
+                try
+                {
+                    firstNum = Double.Parse(Console.ReadLine());
+
+                    if (firstNum <= 0)
+                    {
+                        Console.WriteLine(firstNum + " is not an acceptable value.");
+                        continue;
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("That is not valid input.");
+                    continue;
+                }
 
                 // Prompt user for math operator
                 Console.Write("Select an operator [+, -, *, /, %, ^]:   ");
@@ -32,7 +47,22 @@ namespace SimpleCalculator
 
                 // Prompt user for second number
                 Console.Write("Enter second number:     ");
-                secondNum = Double.Parse(Console.ReadLine());
+                
+                try
+                {
+                    secondNum = Double.Parse(Console.ReadLine());
+
+                    if (secondNum <= 0)
+                    {
+                        Console.WriteLine(secondNum + " is not an acceptable value.");
+                        continue;
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("That is not valid input.");
+                    continue;
+                }
 
                 // Set possible answers
                 switch (ops)
