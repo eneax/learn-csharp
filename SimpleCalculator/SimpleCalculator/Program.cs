@@ -11,10 +11,9 @@ namespace SimpleCalculator
         static void Main(string[] args)
         {
             // Define app variables
-            double firstNum;
-            double secondNum;
-            double input;
-            string ops;
+            double firstNum, secondNum;
+            double result = 0.0;
+            char ops;
 
             // Display app info
             Console.WriteLine("Console Calculator");
@@ -22,77 +21,60 @@ namespace SimpleCalculator
 
             while (true)
             {
-                // Prompt user for first number
-                Console.Write("\nEnter first number:    ");
-                
                 try
                 {
-                    firstNum = Double.Parse(Console.ReadLine());
+                    // Prompt user for first number
+                    Console.Write("Enter a number: ");
+                    firstNum = double.Parse(Console.ReadLine());
+                    
+                    // Prompt user for operator
+                    Console.Write("Enter an operator: ");
+                    ops = char.Parse(Console.ReadLine());
 
-                    if (firstNum <= 0)
+                    // Prompt user for second number
+                    Console.Write("Enter a number: ");
+                    secondNum = double.Parse(Console.ReadLine());
+
+                    if (ops != '+' &&
+                        ops != '-' &&
+                        ops != '*' &&
+                        ops != '/')
+                        throw new Exception(ops.ToString());
+
+                    if (ops == '/') if (ops == 0)
+                        throw new DivideByZeroException("It is not allowed to divide by zero!");
+
+                    switch (ops)
                     {
-                        Console.WriteLine(firstNum + " is not an acceptable value.");
-                        continue;
+                        case '+':
+                            result = firstNum + secondNum;
+                            break;
+                        case '-':
+                            result = firstNum - secondNum;
+                            break;
+                        case '*':
+                            result = firstNum * secondNum;
+                            break;
+                        case '/':
+                            result = firstNum / secondNum;
+                            break;
+                        default:
+                            Console.WriteLine("Bad Operation");
+                            break;
                     }
+
+                    // Print final result
+                    Console.WriteLine($"\nFinal result: {firstNum} {ops} {secondNum} = {result}");
                 }
-                catch (FormatException)
+                catch (DivideByZeroException ex)
                 {
-                    Console.WriteLine("That is not valid input.");
-                    continue;
+                    Console.WriteLine(ex.Message);
                 }
-
-                // Prompt user for math operator
-                Console.Write("Select an operator [+, -, *, /, %, ^]:   ");
-                ops = Console.ReadLine();
-
-                // Prompt user for second number
-                Console.Write("Enter second number:     ");
-                
-                try
+                catch (Exception ex)
                 {
-                    secondNum = Double.Parse(Console.ReadLine());
-
-                    if (secondNum <= 0)
-                    {
-                        Console.WriteLine(secondNum + " is not an acceptable value.");
-                        continue;
-                    }
+                    Console.WriteLine($"\nOperation Error: {ex.Message} is not a valid operator");
                 }
-                catch (FormatException)
-                {
-                    Console.WriteLine("That is not valid input.");
-                    continue;
-                }
-
-                // Set possible answers
-                switch (ops)
-                {
-                    case "+":
-                        input = firstNum + secondNum;
-                        break;
-                    case "-":
-                        input = firstNum - secondNum;
-                        break;
-                    case "*":
-                        input = firstNum * secondNum;
-                        break;
-                    case "/":
-                        input = firstNum / secondNum;
-                        break;
-                    case "%":
-                        input = firstNum % secondNum;
-                        break;
-                    case "^":
-                        input = Math.Pow(firstNum, secondNum);
-                        break;
-                    default:
-                        input = 0;
-                        break;
-                }
-
-                // Print final result
-                Console.WriteLine($"\nFinal result: {firstNum} {ops} {secondNum} = {input}");
-
+                Console.ReadKey();
 
                 // Keep asking to run calc again until user answers [y or n]
                 while (true)
