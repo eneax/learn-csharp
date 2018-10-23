@@ -78,11 +78,14 @@ namespace SimpleCalculator
                 {
                     Console.WriteLine(ex.Message);
                 }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Only numbers are allowed!");
+                }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"\nOperation Error: {ex.Message} is not a valid operator");
                 }
-                Console.ReadKey();
 
                 // Keep asking to run calc again until user answers [y or n]
                 while (true)
