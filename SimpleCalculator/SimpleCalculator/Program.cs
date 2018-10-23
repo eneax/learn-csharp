@@ -17,7 +17,7 @@ namespace SimpleCalculator
 
             // Display app info
             GetAppInfo();
-            Console.WriteLine("*******************************************");
+            PrintColorMessage(ConsoleColor.DarkCyan, "*******************************************");
 
             while (true)
             {
@@ -67,31 +67,31 @@ namespace SimpleCalculator
                             result = Math.Pow(firstNum, secondNum);
                             break;
                         default:
-                            Console.WriteLine("Bad Operation");
+                            PrintColorMessage(ConsoleColor.DarkRed, "Bad Operation!");
                             break;
                     }
 
                     // Print final result
-                    Console.WriteLine($"\nFinal result: {firstNum} {ops} {secondNum} = {result}");
+                    PrintColorMessage(ConsoleColor.DarkGreen, $"\nFinal result: {firstNum} {ops} {secondNum} = {result}");
                 }
                 catch (DivideByZeroException ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    PrintColorMessage(ConsoleColor.DarkRed, ex.Message);
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Only numbers are allowed!");
+                    PrintColorMessage(ConsoleColor.DarkRed, "Only numbers are allowed!");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"\nOperation Error: {ex.Message} is not a valid operator");
+                    PrintColorMessage(ConsoleColor.DarkRed, $"\nOperation Error: {ex.Message} is not a valid operator");
                 }
 
                 // Keep asking to run calc again until user answers [y or n]
                 while (true)
                 {
                     // Ask user to run again
-                    Console.WriteLine("\n\nRun again? [y or n]");
+                    PrintColorMessage(ConsoleColor.DarkYellow, "\n\nRun again? [y or n]");
 
                     // Get answer
                     string answer = Console.ReadLine().ToLower();
@@ -107,7 +107,7 @@ namespace SimpleCalculator
                     }
                     else
                     {
-                        Console.WriteLine("Invalid entry!");
+                        PrintColorMessage(ConsoleColor.DarkRed, "Invalid entry!");
                         continue;
                     }
                 }
@@ -127,6 +127,19 @@ namespace SimpleCalculator
 
             // Print out app info
             Console.WriteLine($"{appName}: Version {appVersion} by {appAuthor}");
+
+            // Reset text color
+            Console.ResetColor();
+        }
+
+        // Print color message
+        static void PrintColorMessage(ConsoleColor color, string message)
+        {
+            // Change text color
+            Console.ForegroundColor = color;
+
+            // Tell users it's not a number
+            Console.WriteLine(message);
 
             // Reset text color
             Console.ResetColor();
