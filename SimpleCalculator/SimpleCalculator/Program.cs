@@ -24,21 +24,23 @@ namespace SimpleCalculator
                 try
                 {
                     // Prompt user for first number
-                    Console.Write("Enter a number: ");
+                    Console.Write("\nEnter a number:      ");
                     firstNum = double.Parse(Console.ReadLine());
                     
                     // Prompt user for operator
-                    Console.Write("Enter an operator: ");
+                    Console.Write("Enter an operator (+, -, *, /, %, ^): ");
                     ops = char.Parse(Console.ReadLine());
 
                     // Prompt user for second number
-                    Console.Write("Enter a number: ");
+                    Console.Write("Enter a number:      ");
                     secondNum = double.Parse(Console.ReadLine());
 
                     if (ops != '+' &&
                         ops != '-' &&
                         ops != '*' &&
-                        ops != '/')
+                        ops != '/' &&
+                        ops != '%' &&
+                        ops != '^')
                         throw new Exception(ops.ToString());
 
                     if (ops == '/') if (ops == 0)
@@ -57,6 +59,12 @@ namespace SimpleCalculator
                             break;
                         case '/':
                             result = firstNum / secondNum;
+                            break;
+                        case '%':
+                            result = firstNum % secondNum;
+                            break;
+                        case '^':
+                            result = Math.Pow(firstNum, secondNum);
                             break;
                         default:
                             Console.WriteLine("Bad Operation");
