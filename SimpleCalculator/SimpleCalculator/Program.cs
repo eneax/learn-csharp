@@ -28,7 +28,7 @@ namespace SimpleCalculator
                     firstNum = double.Parse(Console.ReadLine());
                     
                     // Prompt user for operator
-                    Console.Write("Enter an operator (+, -, *, /, %, ^): ");
+                    Console.Write("Enter an operator (+, -, *, /, %, ^):    ");
                     ops = char.Parse(Console.ReadLine());
 
                     // Prompt user for second number
@@ -42,9 +42,6 @@ namespace SimpleCalculator
                         ops != '%' &&
                         ops != '^')
                         throw new Exception(ops.ToString());
-
-                    if (ops == '/') if (ops == 0)
-                        throw new DivideByZeroException("It is not allowed to divide by zero!");
 
                     switch (ops)
                     {
@@ -73,10 +70,6 @@ namespace SimpleCalculator
 
                     // Print final result
                     PrintColorMessage(ConsoleColor.DarkGreen, $"\nFinal result: {firstNum} {ops} {secondNum} = {result}");
-                }
-                catch (DivideByZeroException ex)
-                {
-                    PrintColorMessage(ConsoleColor.DarkRed, ex.Message);
                 }
                 catch (FormatException)
                 {
