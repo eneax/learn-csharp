@@ -16,8 +16,8 @@ namespace SimpleCalculator
             char ops;
 
             // Display app info
-            Console.WriteLine("Console Calculator");
-            Console.WriteLine("*******************");
+            GetAppInfo();
+            Console.WriteLine("*******************************************");
 
             while (true)
             {
@@ -112,6 +112,24 @@ namespace SimpleCalculator
                     }
                 }
             }
+        }
+
+        // Display app info
+        static void GetAppInfo()
+        {
+            // Set app variables
+            string appName = "Simple Calculator";
+            string appVersion = "1.0.0";
+            string appAuthor = "eneax";
+
+            // Change text color
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            // Print out app info
+            Console.WriteLine($"{appName}: Version {appVersion} by {appAuthor}");
+
+            // Reset text color
+            Console.ResetColor();
         }
     }
 }
