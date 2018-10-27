@@ -37,9 +37,11 @@ A class is a type or blueprint that we use to create objects, so an object is an
 
 
 ## How to create an object
+ ```
 Person person = new Person();
 person.Name = "Enea";
 person.Introduce();
+ ```
 
 In order to create an object, we need to specify a type (Person) and an identifier (person),
 plus we need to allocate memory for it (using the 'new' keyword) and finally repeat the type of the class followed by '()'.
