@@ -50,8 +50,8 @@ Char	  |         Description          |
 ----------|------------------------------|
 \n	      |    New Line	                 |
 \t	      |    Tab      	             | 
-\\	      |    Backslash	             |  
-`\'`	  |    Single Quotation Mark	 |  
+`\\`	  |    Backslash	             |  
+\'  	  |    Single Quotation Mark	 |  
 \"	      |    Double Quotation Mark	 |  
 
 
