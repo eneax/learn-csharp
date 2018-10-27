@@ -65,6 +65,30 @@ c:\folder1\folder2
 c:\folder3\folder4";
 
             Console.WriteLine(text);
+
+
+
+            // Enums
+            var method = ShippingMethod.ExpressMail;
+            Console.WriteLine((int)method);
+
+            var methodID = 3;
+            Console.WriteLine((ShippingMethod)methodID);
+
+            // Convert 'method' into string
+            Console.WriteLine(method.ToString());
+
+            // Convert (or Parse) string into ShippingMethod
+            var methodName = "ExpressMail";
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+        }
+
+        // Enums example
+        public enum ShippingMethod
+        {
+            RegularMail = 1,
+            FastMail = 2,
+            ExpressMail = 3,
         }
     }
 }

@@ -17,9 +17,9 @@ It is preferable to use enums
 ```
 public enum ShippingMethod
 {
-    RegularMail = 1;
-    FastMail = 2;
-    ExpressMail = 3;
+    RegularMail = 1,
+    FastMail = 2,
+    ExpressMail = 3,
 }
 
 var method = ShippingMethod.ExpressMail;
