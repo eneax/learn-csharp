@@ -51,7 +51,7 @@ Char	  |         Description          |
 \n	      |    New Line	                 |
 \t	      |    Tab      	             | 
 \\	      |    Backslash	             |  
-\'	      |    Single Quotation Mark	 |  
+`\'`	  |    Single Quotation Mark	 |  
 \"	      |    Double Quotation Mark	 |  
 
 
