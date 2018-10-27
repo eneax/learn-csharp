@@ -6,7 +6,7 @@ A class is a type or blueprint that we use to create objects, so an object is an
 
 
 ## How to create a class
-public class Person 
+ ```public class Person 
 {
     public string Name;
 
@@ -15,15 +15,17 @@ public class Person
         Console.WriteLine("Hi, my name is " + Name);
     }
 }
+ ```
 
 
-public class Calculator
+ ```public class Calculator
 {
     public int Add(int a, int b)
     {
         return a + b;
     }
 }
+ ```
 
 - public is the access modifier: it determines who can access this class
 - inside a class we can have variables, that we call 'fields'
@@ -45,7 +47,7 @@ Once we create an object, we can access his methods with the dot notation.
 
 
 ## Static Modifier
-public class Calculator
+ ```public class Calculator
 {
     public static int Add(int a, int b)
     {
@@ -62,6 +64,7 @@ public class Program
     {        
     }
 }
+ ```
 
 - we don't need to create an object to access a static member
 - the method can be accessed by the class itself
