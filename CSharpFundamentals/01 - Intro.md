@@ -32,3 +32,20 @@ An EXE file represents a program that can be executed.
 A DLL (Dynamic-link library) is a file that includes code that can be re-used across different programs.
 
 When you compile an application, the compiler builds one or more assemblies depending on how you partition your code.
+
+
+## Primitive Types 
+
+Type	  |  Bytes	 | .NET Type  |
+----------|----------|------------|
+byte	  |    1	 |  Byte      |
+short	  |    2	 |  Int16     |
+int	      |    4	 |  Int32     |
+long	  |    8	 |  Int64     |
+float	  |    4	 |  Single    |
+double	  |    8	 |  Double    |
+decimal	  |   16	 |  Decimal   |
+bool	  |    1	 |  Boolean   |
+char	  |    2	 |  Char      |
+
+In C# we can find also a few non-primitive types: string, array, class, struct (or structure).
