@@ -38,6 +38,33 @@ namespace CSharpFundamentals
 
 
             var names = new string[3] { "Jim", "John", "Jack" };
+
+
+            // Strings
+            var firstName = "Enea";
+            var lastName = "Xharja";
+
+            var fullName = firstName + " " + lastName;
+            var fullName2 = string.Format("My name is {0} {1}", firstName, lastName);
+            var fullName3 = $"My name is {firstName} {lastName}";
+
+            Console.WriteLine(fullName);
+            Console.WriteLine(fullName2);
+            Console.WriteLine(fullName3);
+
+
+            var namesArr = new string[3] { "Jim", "John", "Jack" };
+            var formattedNames = string.Join(", ", namesArr);
+            Console.WriteLine(formattedNames);
+
+
+            // Verbatim Strings
+            var text = @"Hi Enea
+Look into the following path
+c:\folder1\folder2
+c:\folder3\folder4";
+
+            Console.WriteLine(text);
         }
     }
 }
