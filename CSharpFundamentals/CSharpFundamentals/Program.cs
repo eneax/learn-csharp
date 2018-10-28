@@ -11,6 +11,9 @@ namespace CSharpFundamentals
     {
         static void Main(string[] args)
         {
+            /*
+            CLASSES AND OBJECTS EXAMPLE
+
             Person john = new Person();
             john.FirstName = "John";
             john.LastName = "McGill";
@@ -20,7 +23,13 @@ namespace CSharpFundamentals
             var result = calculator.Add(3, 5);
             Console.WriteLine(result);
 
-            // Arrays
+            */
+
+
+
+            /*
+            ARRAYS EXAMPLE
+            
             int[] numbers = new int[3];
             numbers[0] = 1;
 
@@ -39,8 +48,13 @@ namespace CSharpFundamentals
 
             var names = new string[3] { "Jim", "John", "Jack" };
 
+            */
 
-            // Strings
+
+
+            /*
+            STRINGS EXAMPLE
+            
             var firstName = "Enea";
             var lastName = "Xharja";
 
@@ -57,8 +71,14 @@ namespace CSharpFundamentals
             var formattedNames = string.Join(", ", namesArr);
             Console.WriteLine(formattedNames);
 
+            */
 
-            // Verbatim Strings
+
+
+            /*
+            Verbatim Strings
+            VERBATIM STRINGS EXAMPLE
+
             var text = @"Hi Enea
 Look into the following path
 c:\folder1\folder2
@@ -66,9 +86,13 @@ c:\folder3\folder4";
 
             Console.WriteLine(text);
 
+            */
 
 
-            // Enums
+
+            /*
+            ENUMS EXAMPLE
+            
             var method = ShippingMethod.ExpressMail;
             Console.WriteLine((int)method);
 
@@ -81,6 +105,50 @@ c:\folder3\folder4";
             // Convert (or Parse) string into ShippingMethod
             var methodName = "ExpressMail";
             var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+
+            */
+
+
+
+
+            /*
+            VALUE TYPES AND REFERENCE TYPES EXAMPLE 1
+
+            var a = 10;
+            var b = a;
+            b++;
+            // A copy of 'a' is copied into 'b', so 'a' doesn't change
+            Console.WriteLine(string.Format($"a: {a}, b: {b}"));
+
+
+            var arr1 = new int[3] { 1, 2, 3 };
+            var arr2 = arr1;
+            arr2[0] = 0;
+            // Both arr1 and arr2 (located in the 'stack') reference the values { 1, 2, 3 } (located in the 'heap')
+            Console.WriteLine(string.Format($"arr1[0] --> {arr1[0]}, arr2[0] --> {arr2[0]}"));
+
+            */
+
+
+
+            var number = 1;
+            Increment(number);
+            Console.WriteLine(number); // 1
+
+            // Create object with 'object initialization syntax'
+            var person = new Person() { Age = 20 };
+            MakeOld(person);
+            Console.WriteLine(person.Age); // 30
+        }
+
+        public static void Increment(int number)
+        {
+            number += 10;
+        }
+
+        public static void MakeOld(Person person)
+        {
+            person.Age += 10;
         }
 
         // Enums example
@@ -90,5 +158,7 @@ c:\folder3\folder4";
             FastMail = 2,
             ExpressMail = 3,
         }
+
     }
+
 }

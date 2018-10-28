@@ -15,5 +15,7 @@ namespace CSharpFundamentals
         {
             Console.WriteLine($"Hi, my name is {FirstName} {LastName}.");
         }
+
+        public int Age;
     }
 }
