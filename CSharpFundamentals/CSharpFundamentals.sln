@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conditionals", "Conditional
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterations", "Iterations\Iterations.csproj", "{5253F1F8-F502-45DB-89B7-9CDCBDB50827}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomClass", "RandomClass\RandomClass.csproj", "{F3C232D0-43CC-4EF9-B995-511951910478}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5253F1F8-F502-45DB-89B7-9CDCBDB50827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5253F1F8-F502-45DB-89B7-9CDCBDB50827}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5253F1F8-F502-45DB-89B7-9CDCBDB50827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C232D0-43CC-4EF9-B995-511951910478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C232D0-43CC-4EF9-B995-511951910478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C232D0-43CC-4EF9-B995-511951910478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C232D0-43CC-4EF9-B995-511951910478}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
