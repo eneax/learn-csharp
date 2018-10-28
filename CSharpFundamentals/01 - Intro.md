@@ -49,3 +49,27 @@ bool	  |    1	 |  Boolean   |
 char	  |    2	 |  Char      |
 
 In C# we can find also a few non-primitive types: string, array, class, struct (or structure).
+
+
+## Reference Types and Value Types
+
+In C#, we have two main types from which we create new types: Structures (value types) and Classes (reference types).
+
+Structures	          |    Classes	         |
+----------------------|----------------------|
+Primitive Types	      |    Arrays	         |
+Custom Structures	  |    Strings           |
+                      |    Custom Classes    |
+
+- Primitive Types are small types and take no more than 8 bytes.
+
+* Value Type
+    - When you create a variable that is a value type, a part of memory (called stack) is allocated to that variable
+    - This memory allocation is done automatically
+    - When the variable goes out of scope, it is removed immediately by the CLR
+
+* Reference Type
+    - The programmer needs to allocate memory by itself (using the 'new' operator)
+    - The memory allocation happens in a different area of the memory called 'heap'
+    - When the variable goes out of scope, it will continue to exist in the 'heap' for a while
+    - CLR performs a process called 'Garbage collection' that will take care of removing variables from the heap 
