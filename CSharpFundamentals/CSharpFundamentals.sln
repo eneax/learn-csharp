@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFundamentals", "CShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conditionals", "Conditionals\Conditionals.csproj", "{B46492C6-6677-4800-A5D3-0E3A626D3216}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterations", "Iterations\Iterations.csproj", "{5253F1F8-F502-45DB-89B7-9CDCBDB50827}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B46492C6-6677-4800-A5D3-0E3A626D3216}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B46492C6-6677-4800-A5D3-0E3A626D3216}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B46492C6-6677-4800-A5D3-0E3A626D3216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5253F1F8-F502-45DB-89B7-9CDCBDB50827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5253F1F8-F502-45DB-89B7-9CDCBDB50827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5253F1F8-F502-45DB-89B7-9CDCBDB50827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5253F1F8-F502-45DB-89B7-9CDCBDB50827}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
