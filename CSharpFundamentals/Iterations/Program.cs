@@ -69,11 +69,11 @@ namespace Iterations
             while (true)
             {
                 Console.Write("Enter your name: ");
-                string name = Console.ReadLine();
+                string name2 = Console.ReadLine();
 
-                if (!string.IsNullOrEmpty(name))
+                if (!string.IsNullOrEmpty(name2))
                 {
-                    Console.WriteLine(name);
+                    Console.WriteLine(name2);
                     continue;
                 }
 
