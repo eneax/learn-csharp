@@ -56,6 +56,7 @@ Char	  |         Description          |
 
 
 ## Verbatim Strings
+
 ```
 string path = "c:\\projects\\project1\\folder1";
 

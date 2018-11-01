@@ -6,6 +6,7 @@ A class is a type or blueprint that we use to create objects, so an object is an
 
 
 ## How to create a class
+
  ```
  public class Person 
 {
@@ -17,7 +18,6 @@ A class is a type or blueprint that we use to create objects, so an object is an
     }
 }
  ```
-
 
  ```
  public class Calculator
@@ -37,6 +37,7 @@ A class is a type or blueprint that we use to create objects, so an object is an
 
 
 ## How to create an object
+
  ```
 Person person = new Person();
 person.Name = "Enea";
@@ -51,6 +52,7 @@ Once we create an object, we can access his methods with the dot notation.
 
 
 ## Static Modifier
+
  ```
  public class Calculator
 {

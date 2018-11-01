@@ -1,11 +1,13 @@
 # Intro to C#
 
 ## C# vs .NET
+
 - C# is a programming language
 - .NET is a framework. It consists of two components: a run-time environment (CLR) and a class library that we use for building applications.
 
 
 ## CLR
+
 When you compile your C# code, the result is called Intermediate Language (IL) Code. 
 IL code is platform agnostics, which means that it is independent of the computer where the code is running.
 
@@ -15,6 +17,7 @@ As long as a machine has a CLR, it can run your application written in C#.
 
 
 ## Architecture of .NET Applications 
+
 An application built in C# consists of building blocks called classes.
 The classes collaborate with each other so that the app provides some functionality.
 
