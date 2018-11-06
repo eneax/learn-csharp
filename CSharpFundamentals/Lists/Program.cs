@@ -65,9 +65,10 @@ namespace Lists
 
             // Exercises
             var exercises = new Exercises();
-            exercises.Number1();
-            exercises.Number2();
-            exercises.Number3();
+            //exercises.Number1();
+            //exercises.Number2();
+            //exercises.Number3();
+            exercises.Number4();
         }
     }
 
@@ -177,6 +178,46 @@ namespace Lists
             foreach (var n in numbers)
             {
                 Console.WriteLine(n);
+            }
+        }
+
+
+
+        /*
+        Ex. 4 
+        Write a program and ask the user to continuously enter a number or type "Quit" to exit. 
+        The list of numbers may include duplicates. Display the unique numbers that the user has entered.
+        */
+        public void Number4()
+        {
+            var numbers = new List<int>();
+
+            while (true)
+            {
+                Console.Write("Enter a number or type 'Quit' to exit: ");
+                var input = Console.ReadLine();
+
+                if (input.ToLower() == "quit")
+                {
+                    break;
+                }
+
+                numbers.Add(Convert.ToInt32(input));
+            }
+
+            var uniques = new List<int>();
+            foreach (var number in numbers)
+            {
+                if (!uniques.Contains(number))
+                {
+                    uniques.Add(number);
+                }
+            }
+
+            Console.WriteLine("Unique numbers:");
+            foreach (var item in uniques)
+            {
+                Console.WriteLine(item);
             }
         }
     }
