@@ -66,6 +66,7 @@ namespace Lists
             // Exercises
             var exercises = new Exercises();
             exercises.Number1();
+            exercises.Number2();
         }
     }
 
@@ -105,7 +106,7 @@ namespace Lists
 
             if (names.Count > 2)
             {
-                Console.WriteLine($"{names[0]}, {names[1]} and {names.Count - 2} liked your post!");
+                Console.WriteLine($"{names[0]}, {names[1]} and other {names.Count - 2} liked your post!");
             }
             else if (names.Count == 2)
             {
@@ -119,6 +120,29 @@ namespace Lists
             {
                 Console.WriteLine();
             }
+        }
+
+
+
+        /*
+        Ex. 2 
+        Write a program and ask the user to enter their name. 
+        Use an array to reverse the name and then store the result in a new string. 
+        Display the reversed name on the console.
+
+        (ToCharArray converts strings to character arrays. 
+         It is called on a string and returns a new char array.)
+        */
+        public void Number2()
+        {
+            Console.Write("What's your name? ");
+            var name = Console.ReadLine();
+
+            var charArray = name.ToCharArray();
+            Array.Reverse(charArray);
+
+            var reversed = new string(charArray);
+            Console.WriteLine("Reversed name: " + reversed);
         }
     }
 }
