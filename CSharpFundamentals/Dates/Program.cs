@@ -10,7 +10,7 @@ namespace Dates
     {
         static void Main(string[] args)
         {
-            // Working with Dates
+            // Working with DateTime (represents a point in time)
             var dateTime = new DateTime(2018, 1, 1);
 
 
