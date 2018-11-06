@@ -62,3 +62,83 @@ string path = "c:\\projects\\project1\\folder1";
 
 string path = @"c:\projects\project1\folder1";
 ```
+
+
+
+## Formating Strings
+
+* ToLower() --> // "hello world"
+* ToUpper() --> // "HELLO WORLD"
+* Trim()    --> gets rid of the white spaces around the string
+
+
+
+## Searching
+
+* IndexOf('a')              --> returns index of the first occurrence of a given char or string in your string
+* LastIndexOf("Hello")      --> returns index of the last occurrence of a given char or string in your string
+
+
+
+## Substrings
+
+* Substring(startIndex)             --> retrieves all characters from that point until the end of the string
+* Substring(startIndex, length)     --> takes a length in order to limit the number of characters to retrieve
+
+
+
+## Replacing
+
+* Replace('a', '!')
+* Replace("enea", "eneax")
+
+
+
+## Null checking
+
+* String.isNullOrEmpty(str)
+* String.isNullOrWhiteSpace(str)
+
+
+
+## Splitting
+
+* str.Split(' ')
+
+
+
+## Converting Strings to Numbers
+
+```
+string s = "1234";
+int i = int.Parse(s);
+int j = Convert.ToInt32(s);
+```
+
+If the string is 'null' or 'empty':
+- int.Parse() will throw an exception
+- Convert.ToInt32() will return the default value for an integer, which is 0
+
+
+
+## Converting Numbers to Strings
+
+```
+int i = 1234;
+
+string s = i.ToString();        // "1234"
+string t = i.ToString("C");     // "$1,234.00"
+string t = i.ToString("C0");     // "$1,234"
+```
+
+
+
+## Format Strings
+
+Format Specifier  |         Description          |                   Examples                   |
+------------------|------------------------------|----------------------------------------------|
+    c or C        |          Currency            |  123456 (C)              --> $123,456        |
+    d or D        |          Decimal      	     |  1234 (D6)               --> 001234          |
+    e or E	      |          Exponential	     |  1052.0329112756 (E)     --> 1.052033E+003   |
+    f or F	      |          Fixed Point     	 |  1234.567 (F1)           --> 1234.5          |
+    x or X        |          Hexadecimal    	 |  255 (X)                 --> FF              |
