@@ -175,5 +175,29 @@ namespace Strings
 
             Console.WriteLine(variableName);
         }
+
+
+
+        /*
+        Ex. 5 
+        Write a program and ask the user to enter an English word. 
+        Count the number of vowels (a, e, o, u, i) in the word. 
+        So, if the user enters "inadequate", the program should display 6 on the console.
+        */
+        public void Number5()
+        {
+            Console.Write("Enter a word: ");
+            var input = Console.ReadLine().ToLower();
+
+            var vowels = new List<char>(new char[] { 'a', 'e', 'o', 'u', 'i' });
+            var vowelsCount = 0;
+            foreach (var character in input)
+            {
+                if (vowels.Contains(character))
+                    vowelsCount++;
+            }
+
+            Console.WriteLine(vowelsCount);
+        }
     }
 }

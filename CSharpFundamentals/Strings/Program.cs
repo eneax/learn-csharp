@@ -67,7 +67,8 @@ namespace Strings
             //exercises.Number1();
             //exercises.Number2();
             //exercises.Number3();
-            exercises.Number4();
+            //exercises.Number4();
+            exercises.Number5();
         }
     }
 }
