@@ -59,6 +59,12 @@ namespace Strings
             // Convert number into string
             float price = 29.95f;
             Console.WriteLine(price.ToString("C0"));
+
+
+
+            // Exercises for working with Text
+            var exercises = new Exercises();
+            exercises.Number1();
         }
     }
 }
