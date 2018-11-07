@@ -22,6 +22,7 @@ namespace SummarizingText
                 var totalCharacters = 0;
                 var summaryWords = new List<string>();
 
+                // Add words into summaryWords list
                 foreach (var word in words)
                 {
                     summaryWords.Add(word);

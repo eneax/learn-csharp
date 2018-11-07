@@ -142,3 +142,20 @@ Format Specifier  |         Description          |                   Examples   
     e or E	      |          Exponential	     |  1052.0329112756 (E)     --> 1.052033E+003   |
     f or F	      |          Fixed Point     	 |  1234.567 (F1)           --> 1234.5          |
     x or X        |          Hexadecimal    	 |  255 (X)                 --> FF              |
+
+
+
+## StringBuilder
+
+Strings are immutable, but if you need to make a lot of manipulation, then StringBuilder can be useful.
+StringBuilder is a class defined in System.Text namespace and it represents a mutable string.
+
+Although it makes easy and fast to create and manipulate strings, it is not optimized for searching.
+Indeed, it lacks of methods like: IndexOf(), LastIndexOf(), Contains(), StartsWith().
+
+However, it provides some other string manipulation methods, like:
+- Append()
+- Insert()
+- Remove()
+- Replace()
+- Clear()
