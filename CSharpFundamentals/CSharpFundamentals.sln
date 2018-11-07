@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummarizingText", "SummarizingText\SummarizingText.csproj", "{2D90FB2F-B78F-4DEE-8AA5-F8EB58E0D9D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilderDemo", "StringBuilder\StringBuilderDemo.csproj", "{FB90DDC4-4E9E-491D-8BC2-5867CD35CCC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{2D90FB2F-B78F-4DEE-8AA5-F8EB58E0D9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D90FB2F-B78F-4DEE-8AA5-F8EB58E0D9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D90FB2F-B78F-4DEE-8AA5-F8EB58E0D9D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB90DDC4-4E9E-491D-8BC2-5867CD35CCC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB90DDC4-4E9E-491D-8BC2-5867CD35CCC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB90DDC4-4E9E-491D-8BC2-5867CD35CCC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB90DDC4-4E9E-491D-8BC2-5867CD35CCC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
