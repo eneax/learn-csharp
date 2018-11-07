@@ -65,7 +65,8 @@ namespace Strings
             // Exercises for working with Text
             var exercises = new Exercises();
             //exercises.Number1();
-            exercises.Number2();
+            //exercises.Number2();
+            exercises.Number3();
         }
     }
 }
