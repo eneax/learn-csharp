@@ -1,5 +1,4 @@
 # Working with Files
-
 All the classes that we need to work with files are located into the namespace 'System.IO'.
 
 
@@ -15,11 +14,9 @@ With FileInfo class, the security check is done only during the creation of the 
 
 
 ## Directory and DirectoryInfo
-
 - DirectoryInfo provides 'instance' methods
 - Directory provides 'static' methods
 
 
 ## Path Class
-
 It provides methods to work with a string that contains a file or a directory path information.
