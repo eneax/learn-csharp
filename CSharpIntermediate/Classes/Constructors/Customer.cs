@@ -12,24 +12,29 @@ namespace Constructors
         public string Name;
         public List<Order> Orders;
 
-        // Parameterless constructor
+        // Default or Parameterless constructor
         public Customer()
         {
-            Orders = new List<Order>(); // always initialize to empty list
+            /*
+            Whenever you have a class that has a list of objects (of any type),
+            always initialize that list to an empty list.
+            */
+            Orders = new List<Order>();
         }
 
 
         /*
-        When 'Customer(int id)' is called, it will run first the constructor without parameters
+        When 'Customer(int id)' is called, 
+        it will run first the constructor without parameters
         */
         public Customer(int id)
-                : this()
+            : this()
         {
             this.ID = id;
         }
 
         public Customer(int id, string name)
-                : this(id)
+            : this(id)
         {
             this.Name = name;
         }
