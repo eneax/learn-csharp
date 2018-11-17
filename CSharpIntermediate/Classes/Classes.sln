@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fields", "Fields\Fields.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiers", "AccessModifiers\AccessModifiers.csproj", "{D45D0635-8496-4D91-81CA-60BA7837C992}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{C132F066-D864-4509-BF82-4C05FA8CFF6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D45D0635-8496-4D91-81CA-60BA7837C992}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D45D0635-8496-4D91-81CA-60BA7837C992}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D45D0635-8496-4D91-81CA-60BA7837C992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C132F066-D864-4509-BF82-4C05FA8CFF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C132F066-D864-4509-BF82-4C05FA8CFF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C132F066-D864-4509-BF82-4C05FA8CFF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C132F066-D864-4509-BF82-4C05FA8CFF6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
