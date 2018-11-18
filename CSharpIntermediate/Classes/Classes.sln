@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiers", "AccessMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{C132F066-D864-4509-BF82-4C05FA8CFF6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexers", "Indexers\Indexers.csproj", "{9C7BB32D-87AF-4BE3-9ABD-EED2E05A8207}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C132F066-D864-4509-BF82-4C05FA8CFF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C132F066-D864-4509-BF82-4C05FA8CFF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C132F066-D864-4509-BF82-4C05FA8CFF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C7BB32D-87AF-4BE3-9ABD-EED2E05A8207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7BB32D-87AF-4BE3-9ABD-EED2E05A8207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7BB32D-87AF-4BE3-9ABD-EED2E05A8207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7BB32D-87AF-4BE3-9ABD-EED2E05A8207}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
