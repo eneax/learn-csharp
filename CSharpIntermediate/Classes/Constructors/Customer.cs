@@ -16,8 +16,10 @@ namespace Constructors
         public Customer()
         {
             /*
-            Whenever you have a class that has a list of objects (of any type),
-            always initialize that list to an empty list.
+              Orders has to be initialized here, otherwise it 
+              will be a null reference. As a best practice,
+              anytime your class contains a list, always
+              initialize the list.
             */
             Orders = new List<Order>();
         }
