@@ -31,18 +31,31 @@ namespace StopWatch
             isActive = true;
         }
 
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            isActive = false;
+        }
+
         private void btnReset_Click(object sender, EventArgs e)
         {
+            // Project stops and time returns = 0
+            isActive = false;
 
+            ResetTime();
+        }
+
+        private void ResetTime()
+        {
+            timeCsec = 0;
+            timeSec = 0;
+            timeMin = 0;
         }
 
         // Method runs when the project starts
         private void Form1_Load(object sender, EventArgs e)
         {
             // When the project starts, we want all the values = 0
-            timeCsec = 0;
-            timeSec = 0;
-            timeMin = 0;
+            ResetTime();
 
             // We have not started the project yet
             isActive = false;
