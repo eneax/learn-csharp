@@ -63,7 +63,18 @@ namespace StopWatch
                         timeSec = 0;
                     }
                 }
-            }            
+            }
+
+            DrawTime();
+        }
+
+
+        // Update clock on the screen
+        private void DrawTime()
+        {
+            lblCsec.Text = String.Format("{0:00}", timeCsec);
+            lblSec.Text = String.Format("{0:00}", timeSec);
+            lblMin.Text = String.Format("{0:00}", timeMin);
         }
 
         private void ResetTime()
