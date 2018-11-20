@@ -44,6 +44,28 @@ namespace StopWatch
             ResetTime();
         }
 
+        // Function runs everytime the timer ticks (10 times per millisecond)
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (isActive)
+            {
+                timeCsec++;
+
+                // timeCsec >= 100 means that 1 sec passed
+                if (timeCsec >= 100)
+                {
+                    timeSec++;
+                    timeCsec = 0;
+
+                    if (timeSec >= 60)
+                    {
+                        timeMin++;
+                        timeSec = 0;
+                    }
+                }
+            }            
+        }
+
         private void ResetTime()
         {
             timeCsec = 0;
