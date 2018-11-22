@@ -59,6 +59,8 @@ john.Name; // it won't compile
 It's a type of relationship between two classes that 
 allows one to inherit code from the other (i.e. a car is a vehicle).
 
+One of the main benefits of Inheritance is code re-use.
+
 ```
 public class PresentationObj
 {
@@ -68,5 +70,23 @@ public class PresentationObj
 public class Text : PresentationObj
 {
     // Code specific to Text
+}
+```
+
+
+## Composition
+
+It's a type of relationship between two classes that 
+allows one to contain the other (i.e. a car has an engine).
+
+```
+public class Installer
+{
+    private Logger _logger;
+
+    public Installer(Logger logger)
+    {
+        _logger = logger;
+    }
 }
 ```
