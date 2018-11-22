@@ -51,3 +51,22 @@ public class Customer
 var john = new Customer();
 john.Name; // it won't compile
 ```
+
+
+
+## Inheritance
+
+It's a type of relationship between two classes that 
+allows one to inherit code from the other (i.e. a car is a vehicle).
+
+```
+public class PresentationObj
+{
+    // Common shared code
+}
+
+public class Text : PresentationObj
+{
+    // Code specific to Text
+}
+```
