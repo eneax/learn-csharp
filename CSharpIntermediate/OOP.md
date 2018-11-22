@@ -54,6 +54,8 @@ john.Name; // it won't compile
 
 
 
+There are two types of relationships between classes: Inheritance and Composition
+
 ## Inheritance
 
 It's a type of relationship between two classes that 
@@ -72,6 +74,12 @@ public class Text : PresentationObj
     // Code specific to Text
 }
 ```
+
+Problems with inheritance:
+- easily abused
+- large hierarchies
+- fragility
+
 
 
 ## Composition
