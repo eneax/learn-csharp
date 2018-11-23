@@ -6,6 +6,35 @@ using System.Threading.Tasks;
 
 namespace AccessModifiers
 {
+    // class that derives from the Customer class
+    public class GoldenCustomer : Customer
+    {
+        public void OfferVoucher()
+        {
+            var rating = this.CalculateRating(excludeOrders: true);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var customer = new Customer();
+            customer.Promote();
+        }
+    }
+}
+
+
+
+
+
+
+
+/*
+ 
+namespace AccessModifiers
+{
     public class Person
     {
         private DateTime _birthdate;
@@ -31,3 +60,5 @@ namespace AccessModifiers
         }
     }
 }
+
+*/
