@@ -60,3 +60,46 @@ public class Customer
     public Customer(int id, string name) { ... }
 }
 ```
+
+
+
+## Constructors and Inheritance
+
+- Base class constructors are always executed first
+- Base class constructors are not inherited
+
+```
+public class Vehicle
+{
+    private string _registrationNumber;
+
+    public Vehicle(string registrationNumber)
+    {
+        _registrationNumber = registrationNumber;
+    }
+}
+```
+
+Derived class
+```
+public class Car : Vehicle
+{
+    public Car(string registrationNumber)
+    {
+        _registrationNumber = registrationNumber;
+        // not valid --> we declared _registrationNumber as private
+    }
+}
+```
+
+Solution: call the constructor of the Vehicle class --> ': base(registrationNumber)'
+```
+public class Car : Vehicle
+{
+    public Car(string registrationNumber)
+        : base(registrationNumber)
+    {
+        // Initialize fields specific to the Car class
+    }
+}
+```
