@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodOverriding", "MethodO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClasses", "AbstractClasses\AbstractClasses.csproj", "{D87364B0-88AE-411A-9563-AA11E56D1213}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testability", "Testability\Testability.csproj", "{7766159B-C81D-4455-B455-120B58867DDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testability.UnitTests", "Testability.UnitTests\Testability.UnitTests.csproj", "{F8CE97B3-353F-45EA-B606-A0DDADDA374B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{D87364B0-88AE-411A-9563-AA11E56D1213}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D87364B0-88AE-411A-9563-AA11E56D1213}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D87364B0-88AE-411A-9563-AA11E56D1213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7766159B-C81D-4455-B455-120B58867DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7766159B-C81D-4455-B455-120B58867DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7766159B-C81D-4455-B455-120B58867DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7766159B-C81D-4455-B455-120B58867DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8CE97B3-353F-45EA-B606-A0DDADDA374B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8CE97B3-353F-45EA-B606-A0DDADDA374B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8CE97B3-353F-45EA-B606-A0DDADDA374B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8CE97B3-353F-45EA-B606-A0DDADDA374B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
