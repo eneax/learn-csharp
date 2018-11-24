@@ -32,3 +32,36 @@ Finally
   We reduce the coupling between two classes by putting an interface between them. 
   This way, if one of these classes changes, it will have no impact on the class that is dependent on that 
   (as long as the interface is kept the same).
+
+
+
+## Interfaces and Testability
+
+Unit testing is part of the automated practice which helps improve the quality of our code. 
+With automated testing, we write code to test our own code. This helps catching bugs early on as we change the code.
+
+In order to unit test a class, we need to isolate it. 
+This means: we need to assume that every other class in our application is working properly and 
+see if the class under test is working as expected.
+
+A class that has tight dependencies to other classes cannot be isolated.
+To solve this problem, we use an interface. Here is an example:
+
+```
+public class OrderProcessor
+{
+    private IShippingCalculator _calculator;
+
+    public Customer(IShippingCalculator calculator)
+    {
+        _calculator = calculator;
+    }
+
+    ...
+}
+```
+
+OrderProcessor is not dependent on the ShippingCalculator class. 
+It’s only dependent on an interface (IShippingCalculator). 
+If we change the code inside the ShippingCalculator (i.e. add a new method or change the method implementations),
+it will have no impact on OrderProcessor (as long as the interface is kept the same).
