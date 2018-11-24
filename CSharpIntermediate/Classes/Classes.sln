@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testability", "Testability\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testability.UnitTests", "Testability.UnitTests\Testability.UnitTests.csproj", "{F8CE97B3-353F-45EA-B606-A0DDADDA374B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility", "Extensibility\Extensibility.csproj", "{0003BD13-A2AE-4390-B98A-78D420A0A98A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{F8CE97B3-353F-45EA-B606-A0DDADDA374B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8CE97B3-353F-45EA-B606-A0DDADDA374B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8CE97B3-353F-45EA-B606-A0DDADDA374B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0003BD13-A2AE-4390-B98A-78D420A0A98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0003BD13-A2AE-4390-B98A-78D420A0A98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0003BD13-A2AE-4390-B98A-78D420A0A98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0003BD13-A2AE-4390-B98A-78D420A0A98A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
