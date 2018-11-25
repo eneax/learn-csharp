@@ -15,18 +15,15 @@ namespace StopWatch_ConsoleApp
 
             for (var i = 0; i < 2; i++)
             {
-                stopWatch.Start(DateTime.Now);
+                stopWatch.Start();
 
-                for (var j = 0; j <= 1000; j++)
-                {
-                    Thread.Sleep(1);
-                }
+                Thread.Sleep(1000);
 
-                // stopWatch.Start(DateTime.Now);
+                stopWatch.Stop();
 
-                stopWatch.Stop(DateTime.Now);
+                Console.WriteLine("Duration: " + stopWatch.GetInterval());
 
-                Console.WriteLine(stopWatch.GetInterval().ToString());
+                Console.WriteLine("Press Enter to run the StopWatch one more time.");
                 Console.ReadLine();
             }
         }
