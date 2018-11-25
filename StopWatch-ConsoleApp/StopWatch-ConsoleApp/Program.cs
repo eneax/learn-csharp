@@ -38,24 +38,22 @@ namespace StopWatch_ConsoleApp
         private DateTime _endTime;
         private bool _running;  // false by default
 
-        public void Start(DateTime start)
-        {
-            if (!_running)
-            {
-                _startTime = start;
-                _running = true;
-            }
-            else
-            {
-                throw new InvalidOperationException("Stopwatch is already running!");
-            }
-        }
-
-        public void Stop(DateTime stop)
+        public void Start()
         {
             if (_running)
             {
-                _endTime = stop;
+                throw new InvalidOperationException("Stopwatch is already running!");
+            }
+
+            _startTime = DateTime.Now;
+            _running = true;
+        }
+
+        public void Stop()
+        {
+            if (_running)
+            {
+                _endTime = DateTime.Now;
                 _running = false;
             }
         }
