@@ -51,11 +51,13 @@ namespace StopWatch_ConsoleApp
 
         public void Stop()
         {
-            if (_running)
+            if (!_running)
             {
-                _endTime = DateTime.Now;
-                _running = false;
+                throw new InvalidOperationException("Stopwatch is not running!");
             }
+
+            _endTime = DateTime.Now;
+            _running = false;
         }
 
         public TimeSpan GetInterval()
