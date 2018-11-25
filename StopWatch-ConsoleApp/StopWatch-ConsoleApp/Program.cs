@@ -34,17 +34,16 @@ namespace StopWatch_ConsoleApp
 
     public class StopWatch
     {
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-
-        private bool running = false;
+        private DateTime _startTime;
+        private DateTime _endTime;
+        private bool _running;  // false by default
 
         public void Start(DateTime start)
         {
-            if (!running)
+            if (!_running)
             {
-                StartTime = start;
-                running = true;
+                _startTime = start;
+                _running = true;
             }
             else
             {
@@ -54,16 +53,16 @@ namespace StopWatch_ConsoleApp
 
         public void Stop(DateTime stop)
         {
-            if (running)
+            if (_running)
             {
-                EndTime = stop;
-                running = false;
+                _endTime = stop;
+                _running = false;
             }
         }
 
         public TimeSpan GetInterval()
         {
-            return EndTime - StartTime;
+            return _endTime - _startTime;
         }
     }
 }
