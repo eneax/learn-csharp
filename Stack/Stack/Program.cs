@@ -41,16 +41,6 @@ namespace Stack
             }
 
             _list.Add(obj);
-            int elements = _list.Count;
-
-            if (elements > 1)
-            {
-                for (int i = elements - 1; i > 0; i--)
-                {
-                    _list[i] = _list[i - 1];
-                }
-                _list[0] = obj;
-            }
         }
 
         public object Pop()
@@ -59,16 +49,14 @@ namespace Stack
             {
                 throw new InvalidOperationException("There are no elements in the stack yet.");
             }
-            object ToReturn = _list[0];
 
-            int elements = _list.Count;
-            for (int i = 0; i < elements - 1; i++)
-            {
-                _list[i] = (int)_list[i + 1];
-            }
-            _list.Remove(elements - 1);
+            var index = _list.Count - 1;
 
-            return (ToReturn);
+            var toReturn = index;
+
+            _list.RemoveAt(index);
+
+            return (toReturn);
         }
     }
 }
