@@ -10,19 +10,21 @@ namespace Stack
     {
         static void Main(string[] args)
         {
-            Stack _stack = new Stack();
+            var stack = new Stack();
 
             int ini = 0;
             int max = 5;
 
             for (int i = ini; i <= max; i++)
             {
-                _stack.Push(i);
+                stack.Push(i);
             }
+
+            // stack.Clear();
 
             for (int i = ini; i <= max; i++)
             {
-                Console.WriteLine(_stack.Pop());
+                Console.WriteLine(stack.Pop());
             }
 
             Console.ReadLine();
@@ -31,7 +33,7 @@ namespace Stack
 
     public class Stack
     {
-        private List<object> _list = new List<object>();
+        private readonly List<object> _list = new List<object>();
 
         public void Push(object obj)
         {
@@ -57,6 +59,11 @@ namespace Stack
             _list.RemoveAt(index);
 
             return (toReturn);
+        }
+
+        public void Clear()
+        {
+            _list.Clear();
         }
     }
 }
