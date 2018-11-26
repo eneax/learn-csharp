@@ -10,24 +10,57 @@ namespace WorkFlowEngine
     {
         static void Main(string[] args)
         {
-            var workFlow = new WorkFlowEngine();
-            workFlow.AddWorkFlowObject(new VideoUploader());
-            workFlow.AddWorkFlowObject(new CallWebService());
-            workFlow.AddWorkFlowObject(new SendEmail());
-            workFlow.AddWorkFlowObject(new ChangeStatus());
+            var workFlow = new Workflow();
+            workFlow.Add(new VideoUploader());
+            workFlow.Add(new CallWebService());
+            workFlow.Add(new SendEmail());
+            workFlow.Add(new ChangeStatus());
 
-            workFlow.Run();
+            var engine = new WorkFlowEngine();
+            engine.Run(workFlow);
 
             Console.ReadLine();
         }
     }
 
-    interface IWorkFlow
+    public interface ITask
     {
         void Execute();
     }
 
-    class VideoUploader : IWorkFlow
+    public interface IWorkFlow
+    {
+        void Add(ITask task);
+        void Remove(ITask task);
+        IEnumerable<ITask> GetTasks();
+    }
+
+    public class Workflow : IWorkFlow
+    {
+        private readonly List<ITask> _tasks;
+
+        public Workflow()
+        {
+            _tasks = new List<ITask>();
+        }
+
+        public void Add(ITask task)
+        {
+            _tasks.Add(task);
+        }
+
+        public void Remove(ITask task)
+        {
+            _tasks.Remove(task);
+        }
+
+        public IEnumerable<ITask> GetTasks()
+        {
+            return _tasks;
+        }
+    }
+
+    class VideoUploader : ITask
     {
         public void Execute()
         {
@@ -35,7 +68,7 @@ namespace WorkFlowEngine
         }
     }
 
-    class CallWebService : IWorkFlow
+    class CallWebService : ITask
     {
         public void Execute()
         {
@@ -43,7 +76,7 @@ namespace WorkFlowEngine
         }
     }
 
-    class SendEmail : IWorkFlow
+    class SendEmail : ITask
     {
         public void Execute()
         {
@@ -51,7 +84,7 @@ namespace WorkFlowEngine
         }
     }
 
-    class ChangeStatus : IWorkFlow
+    class ChangeStatus : ITask
     {
         public void Execute()
         {
@@ -59,28 +92,11 @@ namespace WorkFlowEngine
         }
     }
 
-    class WorkFlowEngine
+    public class WorkFlowEngine
     {
-        private List<IWorkFlow> T;
-
-        public WorkFlowEngine()
+        public void Run(IWorkFlow workFlow)
         {
-            T = new List<IWorkFlow>();
-        }
-
-        public void AddWorkFlowObject(IWorkFlow iObject)
-        {
-            T.Add(iObject);
-        }
-
-        public void RemoveWorkFlowObject(IWorkFlow iObject)
-        {
-            T.Remove(iObject);
-        }
-
-        public void Run()
-        {
-            foreach (IWorkFlow I in T)
+            foreach (ITask I in workFlow.GetTasks())
             {
                 I.Execute();
             }
