@@ -33,7 +33,7 @@ namespace RockPaperScissors
                     inputPlayer = Console.ReadLine().ToUpper();
                      
                     // Generate random num from 1 to 3
-                    Random rnd = new Random();
+                    var rnd = new Random();
                     randomInt = rnd.Next(1, 4);
 
                     switch (randomInt)
@@ -158,9 +158,9 @@ namespace RockPaperScissors
         static void GetAppInfo()
         {
             // Set app variables
-            string appName = "Rock, Paper, Scissors";
-            string appVersion = "1.0.0";
-            string appAuthor = "eneax";
+            var appName = "Rock, Paper, Scissors";
+            var appVersion = "1.0.0";
+            var appAuthor = "eneax";
 
             // Change text color
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -179,7 +179,7 @@ namespace RockPaperScissors
             Console.WriteLine("What is your name?");
 
             // Get user name
-            string inputName = Console.ReadLine();
+            var inputName = Console.ReadLine();
 
             Console.WriteLine($"Hello {inputName}, let's play a game...");
         }
