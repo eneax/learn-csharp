@@ -87,7 +87,7 @@ namespace SimpleCalculator
                     PrintColorMessage(ConsoleColor.DarkYellow, "\n\nRun again? [y or n]");
 
                     // Get answer
-                    string answer = Console.ReadLine().ToLower();
+                    var answer = Console.ReadLine().ToLower();
 
                     if (answer == "y")
                     {
@@ -111,9 +111,9 @@ namespace SimpleCalculator
         static void GetAppInfo()
         {
             // Set app variables
-            string appName = "Simple Calculator";
-            string appVersion = "1.0.0";
-            string appAuthor = "eneax";
+            var appName = "Simple Calculator";
+            var appVersion = "1.0.0";
+            var appAuthor = "eneax";
 
             // Change text color
             Console.ForegroundColor = ConsoleColor.Cyan;
