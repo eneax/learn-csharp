@@ -19,7 +19,7 @@ namespace NumberGuesser
             while (true)
             {
                 // Create a new random object (from 1 to 10)
-                Random random = new Random();
+                var random = new Random();
 
                 // Init currect number
                 int correctNumber = random.Next(1, 10);
@@ -69,7 +69,7 @@ namespace NumberGuesser
                 Console.WriteLine("Play again? [y or n]");
 
                 // Get answer
-                string answer = Console.ReadLine().ToLower();
+                var answer = Console.ReadLine().ToLower();
 
                 if (answer == "y")
                 {
@@ -87,9 +87,9 @@ namespace NumberGuesser
         static void GetAppInfo()
         {
             // Set app variables
-            string appName = "Number Guesser";
-            string appVersion = "1.0.0";
-            string appAuthor = "eneax";
+            var appName = "Number Guesser";
+            var appVersion = "1.0.0";
+            var appAuthor = "eneax";
 
             // Change text color
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -108,7 +108,7 @@ namespace NumberGuesser
             Console.WriteLine("What is your name?");
 
             // Get user name
-            string inputName = Console.ReadLine();
+            var inputName = Console.ReadLine();
 
             Console.WriteLine($"Hello {inputName}, let's play a game...");
         }
